@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Paradise Resort</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://wallpaper-house.com/data/out/7/wallpaper2you_181253.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333; /* Dark gray color for the text */
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #444; /* Slightly lighter gray color for the text */
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #555; /* Another shade of gray for the text */
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: yellow; /* Yellow background color for the buttons */
+            color: #333; /* Dark gray text color for the buttons */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease; /* Smooth transition for button color change */
+        }
+
+        .button:hover {
+            background-color: #FFD700; /* Lighter yellow on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <py-script src="yynew0.py">
+
+    </py-script>
+    <div class="container">
+        <img class="photo" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/8-natural-beauty-of-sri-lanka-tharaka-madushani.jpg" alt="Photo">
+        <h1>WELCOME TO FREE PARADISE</h1>
+        <h3> CHOOSE YOUR PARADISE RESORT</h3>
+        <h3> join us enjoy the freedome of life</h3>
+        <!-- Login button -->
+        <button onclick="showLoginForm()">Login</button>
+        
+        <!-- Registration button -->
+        <button onclick="showRegistrationForm()">Registration</button>
+        
+        <!-- The login form -->
+        <div id="login-form" style="display: none;">
+        <h3>Login</h3>
+        <form action="/action_page.php">
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <button type="submit">Login</button>
+        </form>
+        </div>
+        
+        <!-- The registration form -->
+        <div id="registration-form" style="display: none;">
+        <h3>Registration</h3>
+        <form action="/action_page.php">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <button type="submit">Register</button>
+        </form>
+        </div>
+        
+        <script>
+        function showLoginForm() {
+        document.getElementById("login-form").style.display = "block";
+        document.getElementById("registration-form").style.display = "none";
+        }
+        
+        function showRegistrationForm() {
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("registration-form").style.display = "block";
+        }
+        </script>
+        
+        </body>
+        </html>
